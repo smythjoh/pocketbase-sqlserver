@@ -1,20 +1,56 @@
-/.vscode/
-.idea
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
 
+# Go workspace file
+go.work
+go.work.sum
+
+# Output binaries
+/pocketbase
+/examples/base/pocketbase
+/examples/base/base
+
+# Dependency directories (vendor)
+/vendor/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS generated files
 .DS_Store
+Thumbs.db
 
-# goreleaser builds folder
-/.builds/
+# PocketBase data and uploads
+pb_data/
+examples/base/pb_data/
+uploads/
+examples/base/uploads/
 
-# tests coverage
+# Environment files
+.env
+examples/base/.env
+
+# Docker artifacts
+pb_migrations/
+pb_hooks/
+*.log
+
+# Node modules (if using JS hooks)
+/node_modules/
+examples/base/pb_hooks/node_modules/
+
+# Coverage files
 coverage.out
 
-# plaintask todo files
-*.todo
-
-# generated markdown previews
-README.html
-CHANGELOG.html
-CHANGELOG_16_22.html
-CHANGELOG_8_15.html
-LICENSE.html
+# Ignore Docker build cache
+**/.dockerignore
